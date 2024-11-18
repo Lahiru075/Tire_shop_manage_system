@@ -282,8 +282,7 @@ public class ViewOrdersController implements Initializable {
 
             JasperViewer.viewReport(jasperPrint, false);
         } catch (JRException e) {
-//            new Alert(Alert.AlertType.ERROR, "Fail to generate report...!").show();
-            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, "Fail to generate report...!").show();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "DB error...!").show();
         }

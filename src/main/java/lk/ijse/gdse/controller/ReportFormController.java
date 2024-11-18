@@ -7,15 +7,21 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import lk.ijse.gdse.db.DBConnection;
 import lk.ijse.gdse.dto.OrderViewDto;
 import lk.ijse.gdse.dto.ReportDto;
 import lk.ijse.gdse.dto.Tm.OrderViewTm;
 import lk.ijse.gdse.dto.Tm.ReportTm;
 import lk.ijse.gdse.model.ReportModel;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class ReportFormController implements Initializable {
@@ -134,6 +140,46 @@ public class ReportFormController implements Initializable {
     @FXML
     void butGenarateOnAction(ActionEvent event) {
 
+        String day1 = txtFirstDay.getText();
+        String day2 = txtSecondDay.getText();
+
+        if (day1.isEmpty() || day2.isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Please enter both start and end days").showAndWait();
+            return;
+        }
+
+        String dayPatten = "^\\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2]\\d|3[0-1])$";
+
+        if (!day1.matches(dayPatten) || !day2.matches(dayPatten)) {
+            new Alert(Alert.AlertType.ERROR, "Please enter a valid date").showAndWait();
+            return;
+        }
+
+        try {
+            JasperReport jasperReport = JasperCompileManager.compileReport(
+                    getClass()
+                            .getResourceAsStream("/report/PaymentReport.jrxml"
+                            ));
+
+            Connection connection = DBConnection.getInstance().getConnection();
+
+            Map<String, Object> parameters = new HashMap<>();
+
+            parameters.put("dayOne",txtFirstDay.getText());
+            parameters.put("dayTwo",txtSecondDay.getText());
+
+            JasperPrint jasperPrint = JasperFillManager.fillReport(
+                    jasperReport,
+                    parameters,
+                    connection
+            );
+
+            JasperViewer.viewReport(jasperPrint, false);
+        } catch (JRException e) {
+            new Alert(Alert.AlertType.ERROR, "Fail to generate report...!").show();
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, "DB error...!").show();
+        }
     }
 
     @Override

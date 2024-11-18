@@ -52,8 +52,11 @@
 	</field>
 	<background splitType="Stretch"/>
 	<title height="128" splitType="Stretch">
-		<element kind="staticText" uuid="8b96132a-1a00-4596-8774-7582eecadae4" x="-20" y="0" width="595" height="80" fontSize="27.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+		<element kind="staticText" uuid="8b96132a-1a00-4596-8774-7582eecadae4" x="-12" y="0" width="570" height="80" fontSize="27.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[Orders Roport]]></text>
+			<box>
+				<pen lineWidth="1.25"/>
+			</box>
 		</element>
 		<element kind="staticText" uuid="7c9c30f6-ef2e-40f2-922f-fca13c6e31aa" x="85" y="90" width="70" height="30" fontSize="20.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
 			<text><![CDATA[From]]></text>

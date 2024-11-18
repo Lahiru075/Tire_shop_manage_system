@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="994.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.UserFormController">
+   <children>
+      <VBox layoutX="-4.0" layoutY="-2.0" prefHeight="720.0" prefWidth="968.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="User Form">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox layoutX="10.0" layoutY="116.0" prefHeight="123.0" prefWidth="932.0" spacing="30.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="27.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="160.0" prefHeight="27.0" prefWidth="899.0">
+               <children>
+                  <Label prefWidth="150.0" text="User Id" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labUserId" layoutX="10.0" layoutY="15.0" maxWidth="1.7976931348623157E308" prefHeight="18.0" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefHeight="23.0" prefWidth="162.0" text="Role" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cmbRole" prefHeight="26.0" prefWidth="793.0" style="-fx-background-color: #fff; -fx-border-color: blue; -fx-border-width: 0px 0px 1px 0px;" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefWidth="150.0" text="Password" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPassword" promptText="Password1234" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="48.0">
+               <children>
+                  <Label prefWidth="150.0" text="Username" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUsername" promptText="Username" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="35.2" layoutY="351.0" prefHeight="27.0" prefWidth="915.0" spacing="30.0" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="35.200000000000045">
+         <children>
+            <Button layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetOnAction" prefWidth="80.0" styleClass="butMain" text="Reset" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="80.0" styleClass="butMain" text="Delete" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnUpdate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="80.0" styleClass="butMain" text="Update" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSave" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="27.0" prefWidth="140.0" styleClass="butMain" text="Save">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="tbUser" layoutX="35.2" layoutY="423.4" onMouseClicked="#onMouseClicked" prefHeight="260.0" prefWidth="924.0" AnchorPane.bottomAnchor="37.39999999999998" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="35.200000000000045" AnchorPane.topAnchor="423.4">
+         <columns>
+            <TableColumn fx:id="colUserId" prefWidth="246.40003508329391" text="User Id" />
+            <TableColumn fx:id="colRole" minWidth="0.0" prefWidth="231.19992065429688" text="Role" />
+            <TableColumn fx:id="colPassword" prefWidth="217.59991455078125" text="Password" />
+            <TableColumn fx:id="colUsername" prefWidth="227.2000732421875" text="Username" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

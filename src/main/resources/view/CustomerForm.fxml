@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="994.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.CustomerFormController">
+   <children>
+      <VBox layoutX="-4.0" layoutY="-2.0" prefHeight="720.0" prefWidth="968.0" stylesheets="@css/style.css" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Customer Form">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox layoutX="35.2" layoutY="112.0" prefHeight="223.0" prefWidth="932.0" spacing="15.0" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="27.200000000000045">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="160.0" prefHeight="27.0" prefWidth="899.0">
+               <children>
+                  <Label prefWidth="150.0" text="Customer Id" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCustomerId" layoutX="10.0" layoutY="15.0" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="782.0" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefWidth="150.0" text="Name" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" prefHeight="28.0" prefWidth="712.0" promptText="customer" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefWidth="150.0" text="Email" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" promptText="customer@gmail.com" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="48.0">
+               <children>
+                  <Label prefWidth="150.0" text="Contact" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtContact" promptText="0777777777" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="36.0">
+               <children>
+                  <Label prefWidth="150.0" text="Address" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAddress" promptText="Colombo" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="35.2" layoutY="358.0" prefHeight="27.0" prefWidth="915.0" spacing="30.0" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="35.200000000000045">
+         <children>
+            <Button layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetOnAction" prefWidth="80.0" styleClass="butMain" stylesheets="@css/style.css" text="Reset" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="80.0" styleClass="butMain" text="Delete" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnUpdate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="80.0" styleClass="butMain" text="Update" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSave" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="27.0" prefWidth="140.0" styleClass="butMain" text="Save">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="tbCustomer" layoutX="35.2" layoutY="423.8" onMouseClicked="#onMouseClicked" prefHeight="263.0" prefWidth="924.0" AnchorPane.bottomAnchor="33.799999999999955" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="35.200000000000045" AnchorPane.topAnchor="423.8">
+         <columns>
+            <TableColumn fx:id="colCustomerId" prefWidth="195.9999656677246" text="Customer ID" />
+            <TableColumn fx:id="colName" minWidth="0.0" prefWidth="197.6000518798828" text="Name" />
+            <TableColumn fx:id="colEmail" prefWidth="187.20001220703125" text="Email" />
+            <TableColumn fx:id="colContact" prefWidth="165.60003662109375" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="204.7999267578125" text="Address" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

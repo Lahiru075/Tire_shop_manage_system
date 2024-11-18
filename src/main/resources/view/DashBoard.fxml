@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="720.0" prefWidth="1253.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.DashBoardController">
+   <children>
+      <VBox prefWidth="258.0" spacing="18.0" stylesheets="@css/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="994.6" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="butPlaceOrder" mnemonicParsing="false" onAction="#butPlaceOrderOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" stylesheets="@css/style.css" text="Place Order">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butCustomerManage" layoutX="20.0" layoutY="168.0" mnemonicParsing="false" onAction="#butCustomerManageOnAction" prefHeight="14.0" prefWidth="238.0" styleClass="butMenu" text="Customer Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butOrdersView" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#butOrdersViewOnAction" prefHeight="18.0" prefWidth="238.0" styleClass="butMenu" stylesheets="@css/style.css" text="View Orders">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butEmployeeManage" layoutX="20.0" layoutY="247.0" mnemonicParsing="false" onAction="#butEmployeeManageOnAction" prefHeight="38.0" prefWidth="238.0" styleClass="butMenu" text="Employee Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butStockManage" layoutX="20.0" layoutY="325.0" mnemonicParsing="false" onAction="#butStockManageOnAction" prefHeight="4.0" prefWidth="238.0" styleClass="butMenu" text="Stock Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butSupplierManage" layoutX="20.0" layoutY="404.0" mnemonicParsing="false" onAction="#butSupplierManageOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="Supplier Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butUserManage" layoutX="20.0" layoutY="482.0" mnemonicParsing="false" onAction="#butUserManageOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="User Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butReport" layoutX="20.0" layoutY="560.0" mnemonicParsing="false" onAction="#butReportOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="Report">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butTiresManage" layoutX="20.0" layoutY="532.0" mnemonicParsing="false" onAction="#butTiresManageOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="Tires Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butSupplierOrderManage" layoutX="20.0" layoutY="596.0" mnemonicParsing="false" onAction="#butSupplierOrderManageOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="Supplier Order Manage">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butSendEmail" layoutX="20.0" layoutY="552.0" mnemonicParsing="false" onAction="#butSendEmailOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="Send Email">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="butLogOut" layoutX="20.0" layoutY="609.0" mnemonicParsing="false" onAction="#butLogOutOnAction" prefHeight="0.0" prefWidth="238.0" styleClass="butMenu" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="changeAnchorPane" layoutX="258.4" prefHeight="720.0" prefWidth="994.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="717.0" fitWidth="994.0" layoutY="20.6" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="36.73331298828123" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.7999999999998408" AnchorPane.topAnchor="20.6">
+               <image>
+                  <Image url="@../images/tire-services-illustration-concept-on-white-background-vector.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="717.0" fitWidth="994.0" layoutX="10.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/tire-services-illustration-concept-on-white-background-vector.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

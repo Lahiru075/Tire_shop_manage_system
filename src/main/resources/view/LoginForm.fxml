@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="467.0" prefWidth="784.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.LoginFormController">
+   <children>
+      <VBox layoutX="-2.0" prefHeight="468.0" prefWidth="446.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="314.4" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="476.0" fitWidth="478.0" layoutX="10.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/car-tires-sport-rims-displayed-by-size-use-facilitating-easy-selection-access-customers-shop_750630-7932.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="-3.0" layoutY="-5.0" prefHeight="482.0" prefWidth="476.0" styleClass="bt-gradient" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="ABC Tire Shop" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="150.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="476.0" prefHeight="476.0" prefWidth="310.0" spacing="20.0" style="-fx-background-color: white; -fx-border-width: 0 0 1px 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="473.6" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/istockphoto-1453469488-612x612.jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUsername" prefHeight="37.0" prefWidth="238.0" promptText="Username" style="-fx-border-color: #7367F0; -fx-background-color: #fff; -fx-border-width: 0 0 1px 0;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="txtPassword" promptText="Password" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="40.0" right="40.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button fx:id="butLogin" mnemonicParsing="false" onAction="#butLoginOnAction" prefHeight="24.0" prefWidth="93.0" styleClass="but1" stylesheets="@css/style.css" text="Login" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label text="Already have an account?">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="butSingIn" mnemonicParsing="false" onAction="#butSingInOnAction" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #fff; -fx-border-color: green;" text="Sign up" textFill="#00ff36">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

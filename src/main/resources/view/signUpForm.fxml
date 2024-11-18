@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorpane" prefHeight="467.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.SignUpFormController">
+   <children>
+      <VBox layoutX="-2.0" prefHeight="468.0" prefWidth="446.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="314.4" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="515.0" fitWidth="476.0" layoutX="10.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/car-tires-sport-rims-displayed-by-size-use-facilitating-easy-selection-access-customers-shop_750630-7932.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="476.0" prefHeight="476.0" prefWidth="310.0" spacing="30.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="473.6" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="labUserId" prefHeight="33.0" prefWidth="230.0" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="230.0">
+               <children>
+                  <Label text="User role" textFill="#c79d9d">
+                     <HBox.margin>
+                        <Insets left="8.0" right="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="cmbRole" prefHeight="26.0" prefWidth="145.0" />
+               </children>
+            </HBox>
+            <PasswordField fx:id="txtPassword" promptText="Password" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <TextField fx:id="txtUsername" layoutX="50.0" layoutY="126.0" promptText="Username" style="-fx-border-color: #7367F0; -fx-background-color: #fff; -fx-border-width: 0 0 1px 0;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="butSignIn" mnemonicParsing="false" onAction="#butSignInOnAction" prefHeight="26.0" prefWidth="88.0" styleClass="but1" stylesheets="@css/style.css" text="Sign Up" textFill="WHITE" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="40.0" right="40.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="476.0" prefWidth="476.0" styleClass="bt-gradient" stylesheets="@css/style.css">
+         <children>
+            <Label text="ABC Tire Shop" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="150.0" top="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="30.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

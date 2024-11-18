@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="994.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.TiresFormController">
+   <children>
+      <VBox layoutX="-4.0" layoutY="-2.0" prefHeight="720.0" prefWidth="968.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Tire Form">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox layoutX="10.0" layoutY="107.0" prefHeight="189.0" prefWidth="924.0" spacing="15.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="160.0" prefHeight="27.0" prefWidth="899.0">
+               <children>
+                  <Label prefWidth="150.0" text="Tire Id" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbTireId" layoutX="10.0" layoutY="15.0" maxWidth="1.7976931348623157E308" prefHeight="18.0" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT">
+               <children>
+                  <Label prefWidth="150.0" text="Brand" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBrand" prefHeight="28.0" prefWidth="712.0" promptText="Ceat" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0">
+               <children>
+                  <Label prefWidth="150.0" text="Model" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtModel" promptText="Sport" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="48.0">
+               <children>
+                  <Label prefWidth="150.0" text="Size" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtSize" promptText="255/25" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="36.0">
+               <children>
+                  <Label prefWidth="150.0" text="Year" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtYear" promptText="2023" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="182.0">
+               <children>
+                  <Label prefWidth="150.0" text="Price" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPrice" promptText="12000.0" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="35.2" layoutY="383.0" prefHeight="27.0" prefWidth="915.0" spacing="30.0" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="35.200000000000045">
+         <children>
+            <Button layoutX="290.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetOnAction" prefWidth="80.0" styleClass="butMain" text="Reset" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefWidth="80.0" styleClass="butMain" text="Delete" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnUpdate" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefWidth="80.0" styleClass="butMain" text="Update" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnSave" layoutX="462.0" layoutY="10.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="27.0" prefWidth="140.0" styleClass="butMain" text="Save">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="CLOSED_HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="tbTire" layoutX="35.2" layoutY="460.6" onMouseClicked="#onMouseClicked" prefHeight="223.0" prefWidth="924.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="35.2" AnchorPane.rightAnchor="35.200000000000045" AnchorPane.topAnchor="460.6">
+         <columns>
+            <TableColumn fx:id="colTireId" prefWidth="117.33336943387985" text="Tire Id" />
+            <TableColumn fx:id="colBrand" minWidth="0.0" prefWidth="140.2666778564453" text="Brand" />
+            <TableColumn fx:id="colModel" prefWidth="179.20004272460938" text="Model" />
+            <TableColumn fx:id="colSize" prefWidth="156.53338623046875" text="Size" />
+            <TableColumn fx:id="colYear" prefWidth="170.6666259765625" text="Year" />
+            <TableColumn fx:id="colPrice" prefWidth="155.7333984375" text="Price" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

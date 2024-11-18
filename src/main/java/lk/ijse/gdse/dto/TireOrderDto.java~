@@ -1,0 +1,8 @@
+package lk.ijse.gdse.dto;
+
+public class TireOrderDto {
+    private String orderId;
+    private String tireId;
+    private String description;
+    
+}

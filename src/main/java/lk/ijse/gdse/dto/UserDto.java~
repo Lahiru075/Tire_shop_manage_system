@@ -1,0 +1,7 @@
+package lk.ijse.gdse.dto;
+
+public class UserDto {
+    private String usId;
+    private String role;
+    private String 
+}

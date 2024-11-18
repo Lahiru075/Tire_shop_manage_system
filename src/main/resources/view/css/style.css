@@ -1,0 +1,90 @@
+.bt-gradient {
+    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, rgba(0,0,0,0.72) 0%, rgba(255,255,255,0) 91%);
+}
+
+.but1{
+    -fx-background-color: black;
+}
+
+.main_menu{
+    -fx-background-color: #D3EE98;
+}
+
+.butMenu {
+    -fx-text-fill: black ;
+    -fx-font-size: 17px;
+    -fx-border-radius:3px;
+    -fx-border-color: black;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+}
+.butMenu:hover {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 100%, #74e653 0%,#00f4bc 100%);
+    -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #74e653 0%,#00f4bc 100%);
+}
+
+.butMenu:focused{
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #74e653 0%,#00f4bc 100%);
+    -fx-padding: 8px 15px;
+    -fx-text-fill: black;
+}
+
+.butMain{
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%,
+    rgba(168, 209, 187, 1) 0%,
+    rgba(55, 255, 175, 1) 100%);
+    -fx-border-width: 1px;
+}
+
+.butMain:hover{
+    -fx-text-fill: black ;
+    -fx-border-color: black;
+}
+
+
+
+
+
+.table-row-cell:odd {
+    -fx-background-color: #D0E7D2;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-column-header-background {
+    -fx-background-color: green;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #74e653 0%,#00f4bc 100%);
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+
+.table-row-cell:selected {
+    -fx-background-color:  #68DC92;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.table-cell:selected {
+    -fx-background-color:  #68DC92;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+.table-column-header-background:selected {
+    -fx-background-color: #68DC92;
+}
+
+.table-row-cell {
+    -fx-text-fill: black;
+}
+
+
+

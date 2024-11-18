@@ -1,0 +1,12 @@
+package lk.ijse.gdse.dto.Tm;
+
+import javafx.scene.control.Button;
+
+
+public class CartTm {
+    private String tireId;
+    private int qty;
+    private String desc;
+    private double price;
+    private Button butRemove;
+}

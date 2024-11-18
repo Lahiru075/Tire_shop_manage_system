@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="994.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gdse.controller.PlaceOrderController">
+   <children>
+      <HBox layoutX="-1.0" layoutY="-1.0" prefHeight="278.0" prefWidth="720.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="274.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tireTable" onMouseClicked="#MouseClicked" prefHeight="237.0" prefWidth="675.0">
+              <columns>
+                <TableColumn fx:id="colTireId" prefWidth="82.6666209101677" text="Tire Id" />
+                <TableColumn fx:id="colBrand" prefWidth="114.933349609375" text="Brand" />
+                  <TableColumn fx:id="colModel" prefWidth="132.00001525878906" text="Model" />
+                  <TableColumn fx:id="colSize" minWidth="0.0" prefWidth="123.9998779296875" text="Size " />
+                  <TableColumn fx:id="colYear" prefWidth="113.60012817382812" text="Year" />
+                  <TableColumn fx:id="colPrice" prefWidth="104.79997558593755" text="Price" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="726.0" layoutY="4.0" prefHeight="323.0" prefWidth="266.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="textContact" alignment="CENTER" prefHeight="48.0" prefWidth="266.0" promptText="Customer Contact Number" style="-fx-border-color: green;">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Button fx:id="butCheck" mnemonicParsing="false" onAction="#butCheckOnAction" prefHeight="43.0" prefWidth="90.0" styleClass="butMain" text="Check">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="40.0" />
+               </VBox.margin>
+            </Button>
+            <ComboBox fx:id="empCombo" prefHeight="43.0" prefWidth="246.0" style="-fx-background-color: #fff; -fx-border-color: green;">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></ComboBox>
+            <Label fx:id="labDate" alignment="CENTER" prefHeight="50.0" prefWidth="250.0" textFill="#855dff">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets right="20.0" top="30.0" />
+         </padding>
+      </VBox>
+      <HBox layoutY="341.0" prefHeight="38.0" prefWidth="996.0" spacing="30.0">
+         <children>
+            <TextField fx:id="txtTireId" alignment="CENTER" prefHeight="39.0" prefWidth="214.0" promptText="Tire Id" style="-fx-border-color: green;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="txtQty" alignment="CENTER" layoutX="30.0" layoutY="10.0" prefHeight="39.0" prefWidth="228.0" promptText="Quentity" style="-fx-border-color: green;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#butAddOnAction" prefHeight="38.0" prefWidth="99.0" styleClass="butMain" text="Add">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="35.0" />
+               </HBox.margin>
+            </Button>
+            <Label text="Order Id">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labOrderId" alignment="CENTER" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #fff; -fx-border-color: green;">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="372.0" prefHeight="338.0" prefWidth="706.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <TableView fx:id="tabCart" prefHeight="338.0" prefWidth="696.0">
+              <columns>
+                <TableColumn fx:id="colTireId1" prefWidth="105.8666570186615" text="Tire Id" />
+                <TableColumn fx:id="colQty" minWidth="0.0" prefWidth="85.86661529541016" text="Qty" />
+                  <TableColumn fx:id="colDesc" prefWidth="220.26669311523438" text="Description" />
+                  <TableColumn fx:id="colPrice1" prefWidth="133.33331298828125" text="Price" />
+                  <TableColumn fx:id="colAction" prefWidth="118.39999999999998" text="Action" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="TOP_CENTER" layoutX="706.0" layoutY="413.0" prefHeight="305.0" prefWidth="295.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="107.0" text="Total">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtTotal" alignment="CENTER" contentDisplay="CENTER" prefHeight="62.0" prefWidth="194.0" style="-fx-border-color: black;">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#placeOrderOnAction" prefHeight="46.0" prefWidth="196.0" styleClass="butMain" text="Place Order">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="50.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="14.0" layoutY="281.0" prefHeight="46.0" prefWidth="982.0" spacing="20.0">
+         <children>
+            <TextField fx:id="txtSearchBrand" prefHeight="46.0" prefWidth="149.0" promptText="EnterTire Brand" style="-fx-border-color: green;" />
+            <Button mnemonicParsing="false" onAction="#butSearchBrandOnAction" prefHeight="46.0" prefWidth="103.0" styleClass="butMain" stylesheets="@css/style.css" text="Search">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </Button>
+            <Label text="Quentity">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="labQty" alignment="CENTER" prefHeight="46.0" prefWidth="115.0" style="-fx-background-color: #fff; -fx-border-color: green;">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

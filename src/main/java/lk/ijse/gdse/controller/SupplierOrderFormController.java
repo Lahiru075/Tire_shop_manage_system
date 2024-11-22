@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lk.ijse.gdse.dto.SupplierOrderDto;
 import lk.ijse.gdse.dto.Tm.SupplierOrderTm;
@@ -166,7 +167,7 @@ public class SupplierOrderFormController implements Initializable {
         String qtyPattern = "^[1-9][0-9]*$";
         String brandPattern = "^[a-zA-Z ]{2,30}$";
         String modelPattern = "^[a-zA-Z0-9-_]{2,20}$";
-        String sizePattern = "^\\d{3}\\/\\d{2,3}R\\d{2}(\\s?[0-9]{2,3}[A-Z]{1,2})?$";
+        String sizePattern = "^\\d{3}(\\/(\\d{1,3}|R\\d{2}))?(R\\d{2})?(\\s?[0-9]{2,3}[A-Z]{1,2})?$";
         String yearPattern = "^\\d{4}$";
         String amountPattern = "^[1-9][0-9]*(\\.[0-9]{1,2})?$";
         String datePattern = "^\\d{4}-\\d{2}-\\d{2}$";
@@ -312,6 +313,7 @@ public class SupplierOrderFormController implements Initializable {
         Stage stage = new Stage();
         Scene scene = new Scene(load);
         stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
         Image image = new Image(getClass().getResourceAsStream("/images/tire.png"));
         stage.getIcons().add(image);
         stage.setTitle("View Supplier Orders");
@@ -366,6 +368,32 @@ public class SupplierOrderFormController implements Initializable {
 
     }
 
+    private void configureDatePicker() {
+        dateOderDate.setDayCellFactory(picker -> new javafx.scene.control.DateCell() {
+            @Override
+            public void updateItem(java.time.LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+
+                if (date.isBefore(java.time.LocalDate.now())) {
+                    setDisable(true);
+                    setStyle("-fx-background-color: #ffc0cb;");
+                }
+            }
+        });
+
+        dateReuestDate.setDayCellFactory(picker -> new javafx.scene.control.DateCell() {
+            @Override
+            public void updateItem(java.time.LocalDate date, boolean empty) {
+                super.updateItem(date, empty);
+
+                if (date.isBefore(java.time.LocalDate.now())) {
+                    setDisable(true);
+                    setStyle("-fx-background-color: #ffc0cb;");
+                }
+            }
+        });
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colCartOrderId.setCellValueFactory(new PropertyValueFactory<>("orderId"));
@@ -384,6 +412,7 @@ public class SupplierOrderFormController implements Initializable {
         colAction.setCellValueFactory(new PropertyValueFactory<>("remove"));
 
         try {
+            configureDatePicker();
             loadComboBoxValues();
             reset();
             setCellValues();

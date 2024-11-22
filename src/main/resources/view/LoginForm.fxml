@@ -21,7 +21,7 @@
       </ImageView>
       <VBox layoutX="-3.0" layoutY="-5.0" prefHeight="482.0" prefWidth="476.0" styleClass="bt-gradient" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="ABC Tire Shop" textAlignment="CENTER" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" text="WheelPulse Tire Shop" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
@@ -62,12 +62,12 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Button>
-            <Label text="Already have an account?">
+            <Label text="Don't  have an account?">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Button fx:id="butSingIn" mnemonicParsing="false" onAction="#butSingInOnAction" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #fff; -fx-border-color: green;" text="Sign up" textFill="#00ff36">
+            <Button fx:id="butSingIn" mnemonicParsing="false" onAction="#butSingInOnAction" prefHeight="26.0" prefWidth="92.0" style="-fx-background-color: #fff; -fx-border-color: green;" text="Register" textFill="#00ff36">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>

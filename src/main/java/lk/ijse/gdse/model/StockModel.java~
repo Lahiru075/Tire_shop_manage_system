@@ -120,13 +120,4 @@ public class StockModel {
         }
         return null;
     }
-
-    public int getQty(String description) throws SQLException {
-        ResultSet rst = CrudUtil.execute("select * from stock where description = ?", description);
-
-        if (rst.next()) {
-            return rst.getInt(5);
-        }
-        return 0;
-    }
 }

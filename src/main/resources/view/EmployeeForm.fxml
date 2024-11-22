@@ -48,7 +48,7 @@
                         <Font name="Calibri" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtName" prefHeight="28.0" prefWidth="712.0" promptText="customer" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
+                  <TextField fx:id="txtName" prefHeight="28.0" prefWidth="712.0" promptText="Employee" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 0 0 1px 0;" HBox.hgrow="ALWAYS">
                      <font>
                         <Font name="Calibri" size="14.0" />
                      </font>

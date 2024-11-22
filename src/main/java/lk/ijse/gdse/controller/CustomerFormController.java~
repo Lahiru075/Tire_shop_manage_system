@@ -85,6 +85,7 @@ public class CustomerFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) throws SQLException {
+
         boolean result = customerModel.deleteCustomer(lblCustomerId.getText());
 
         if (result) {
@@ -248,5 +249,8 @@ public class CustomerFormController implements Initializable {
         txtEmail.setText("");
         txtContact.setText("");
         txtAddress.setText("");
+
+        btnSave.setDisable(false);
+
     }
 }

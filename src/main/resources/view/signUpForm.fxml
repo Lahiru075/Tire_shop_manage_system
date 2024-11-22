@@ -21,7 +21,7 @@
             <Image url="@../images/car-tires-sport-rims-displayed-by-size-use-facilitating-easy-selection-access-customers-shop_750630-7932.jpg" />
          </image>
       </ImageView>
-      <VBox alignment="TOP_CENTER" layoutX="476.0" prefHeight="476.0" prefWidth="310.0" spacing="30.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="473.6" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" layoutX="476.0" prefHeight="476.0" prefWidth="310.0" spacing="20.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="473.6" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome" textAlignment="CENTER">
                <font>
@@ -56,10 +56,16 @@
                   <Insets />
                </opaqueInsets>
                <VBox.margin>
-                  <Insets bottom="30.0" />
+                  <Insets bottom="10.0" />
                </VBox.margin>
             </TextField>
-            <Button fx:id="butSignIn" mnemonicParsing="false" onAction="#butSignInOnAction" prefHeight="26.0" prefWidth="88.0" styleClass="but1" stylesheets="@css/style.css" text="Sign Up" textFill="WHITE" />
+            <TextField fx:id="txtAdminUserName" layoutX="50.0" layoutY="230.0" promptText="Username" style="-fx-border-color: #7367F0; -fx-background-color: #fff; -fx-border-width: 1px 1px 1px 1px;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <PasswordField fx:id="txtAdminPassword" layoutX="50.0" layoutY="183.0" promptText="Password" style="-fx-background-color: #fff; -fx-border-color: #7367F0; -fx-border-width: 1px 1px 1px 1px;" />
+            <Button fx:id="butSignIn" mnemonicParsing="false" onAction="#butSignInOnAction" prefHeight="26.0" prefWidth="88.0" styleClass="but1" stylesheets="@css/style.css" text="Register" textFill="WHITE" />
          </children>
          <opaqueInsets>
             <Insets />
@@ -70,7 +76,7 @@
       </VBox>
       <VBox prefHeight="476.0" prefWidth="476.0" styleClass="bt-gradient" stylesheets="@css/style.css">
          <children>
-            <Label text="ABC Tire Shop" textFill="WHITE">
+            <Label text="WheelPulse Tire Shop" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>

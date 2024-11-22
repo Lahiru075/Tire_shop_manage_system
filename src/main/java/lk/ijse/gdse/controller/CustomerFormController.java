@@ -76,11 +76,9 @@ public class CustomerFormController implements Initializable {
             txtContact.setText(customerTm.getContact());
             txtAddress.setText(customerTm.getAddress());
         }
-    }
-
-    @FXML
-    void OnActionbutGenearateReport(ActionEvent event) {
-
+        btnSave.setDisable(true);
+        btnDelete.setDisable(false);
+        btnUpdate.setDisable(false);
     }
 
     @FXML
@@ -249,5 +247,9 @@ public class CustomerFormController implements Initializable {
         txtEmail.setText("");
         txtContact.setText("");
         txtAddress.setText("");
+
+        btnSave.setDisable(false);
+        btnDelete.setDisable(true);
+        btnUpdate.setDisable(true);
     }
 }

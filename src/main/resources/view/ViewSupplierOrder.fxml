@@ -184,17 +184,17 @@
          </font>
       </Label>
       <ComboBox fx:id="cmbStatus" layoutX="174.0" layoutY="286.0" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #fff; -fx-border-color: blue;" />
-      <Button layoutX="840.0" layoutY="637.0" mnemonicParsing="false" onAction="#butAddToStockOnAction" prefHeight="30.0" prefWidth="124.0" styleClass="butMain" text="Add to Stock">
+      <Button fx:id="butAddToStock" layoutX="840.0" layoutY="637.0" mnemonicParsing="false" onAction="#butAddToStockOnAction" prefHeight="30.0" prefWidth="124.0" styleClass="butMain" text="Add to Stock">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="690.0" layoutY="636.0" mnemonicParsing="false" onAction="#butDeleteOnAction" prefHeight="30.0" prefWidth="124.0" styleClass="butMain" text="Delete">
+      <Button fx:id="butDelete" layoutX="690.0" layoutY="636.0" mnemonicParsing="false" onAction="#butDeleteOnAction" prefHeight="30.0" prefWidth="124.0" styleClass="butMain" text="Delete">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="535.0" layoutY="635.0" mnemonicParsing="false" onAction="#butUpdateOnAction" prefHeight="30.0" prefWidth="124.0" styleClass="butMain" text="Update">
+      <Button fx:id="butUpdate" layoutX="535.0" layoutY="635.0" mnemonicParsing="false" onAction="#butUpdateOnAction" prefHeight="30.0" prefWidth="124.0" styleClass="butMain" text="Update">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

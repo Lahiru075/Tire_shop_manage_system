@@ -197,6 +197,10 @@ public class SupplierFormController implements Initializable {
             txtContact.setText(supplierTm.getContact());
             txtAddress.setText(supplierTm.getAddress());
         }
+
+        btnSave.setDisable(true);
+        btnDelete.setDisable(false);
+        btnUpdate.setDisable(false);
     }
 
     @FXML
@@ -231,6 +235,10 @@ public class SupplierFormController implements Initializable {
         txtEmail.setText("");
         txtContact.setText("");
         txtAddress.setText("");
+
+        btnSave.setDisable(false);
+        btnDelete.setDisable(true);
+        btnUpdate.setDisable(true);
     }
 
     private void getNextSupplierId() throws SQLException {

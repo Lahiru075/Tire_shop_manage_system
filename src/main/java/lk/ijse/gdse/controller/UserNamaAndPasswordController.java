@@ -41,37 +41,53 @@ public class UserNamaAndPasswordController {
 
         if (txtUsername.getText().isEmpty() || txtPassword.getText().isEmpty()) {
             new Alert(Alert.AlertType.ERROR, "Please enter username and password").showAndWait();
-        } else {
-            UserDto userDto = loginModel.checkUser(username, password);
-
-            if (userDto.getRole() != null) {
-
-                if (userDto.getRole().toLowerCase().equals("admin")) {
-//                    Stage currentStage = (Stage) mainAnchorPane.getScene().getWindow();
-//                    currentStage.close();
-
-                    Stage currentStage = (Stage) mainAnchorPane.getScene().getWindow();
-                    currentStage.close();
-
-                    Parent load = FXMLLoader.load(getClass().getResource("/view/DashBoard.fxml"));
-                    Stage stage = new Stage();
-                    Scene scene = new Scene(load);
-                    stage.setScene(scene);
-                    stage.setTitle("DashBoard");
-                    stage.setResizable(false);
-                    stage.show();
-                } else {
-                    new Alert(Alert.AlertType.ERROR, "Username or password is incorrect").showAndWait();
-                    txtUsername.clear();
-                    txtPassword.clear();
-                }
-            }else{
-                new Alert(Alert.AlertType.ERROR, "Username or password is incorrect").showAndWait();
-                txtUsername.clear();
-                txtPassword.clear();
-            }
+            return;
         }
 
+        if (username.equals("MainAdmin") && password.equals("password@1234")) {
+            Stage currentStage = (Stage) mainAnchorPane.getScene().getWindow();
+            currentStage.close();
+
+            Parent load = FXMLLoader.load(getClass().getResource("/view/DashBoard.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(load);
+            stage.setScene(scene);
+            stage.setTitle("DashBoard");
+            stage.setResizable(false);
+            stage.show();
+        }else{
+            new Alert(Alert.AlertType.ERROR, "Username or password is incorrect").showAndWait();
+            txtUsername.clear();
+            txtPassword.clear();
+        }
+//            UserDto userDto = loginModel.checkUser(username, password);
+//
+//            if (userDto.getRole() != null) {
+//
+//                if (userDto.getRole().toLowerCase().equals("admin")) {
+////                    Stage currentStage = (Stage) mainAnchorPane.getScene().getWindow();
+////                    currentStage.close();
+//
+//                    Stage currentStage = (Stage) mainAnchorPane.getScene().getWindow();
+//                    currentStage.close();
+//
+//                    Parent load = FXMLLoader.load(getClass().getResource("/view/DashBoard.fxml"));
+//                    Stage stage = new Stage();
+//                    Scene scene = new Scene(load);
+//                    stage.setScene(scene);
+//                    stage.setTitle("DashBoard");
+//                    stage.setResizable(false);
+//                    stage.show();
+//                } else {
+//                    new Alert(Alert.AlertType.ERROR, "Username or password is incorrect").showAndWait();
+//                    txtUsername.clear();
+//                    txtPassword.clear();
+//                }
+//            }else{
+//                new Alert(Alert.AlertType.ERROR, "Username or password is incorrect").showAndWait();
+//                txtUsername.clear();
+//                txtPassword.clear();
+//            }
 
     }
 

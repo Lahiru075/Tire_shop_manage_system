@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lk.ijse.gdse.dto.UserDto;
 
@@ -68,18 +69,17 @@ public class DashBoardController {
 
              butPlaceOrder.setDisable(false);
              butLogOut.setDisable(false);
+             butOrdersView.setDisable(false);
+             butSendEmail.setDisable(false);
+             butReport.setDisable(false);
 
              butCustomerManage.setDisable(true);
              butEmployeeManage.setDisable(true);
-             butOrdersView.setDisable(true);
              butStockManage.setDisable(true);
              butSupplierManage.setDisable(true);
              butUserManage.setDisable(true);
              butSupplierOrderManage.setDisable(true);
              butTiresManage.setDisable(true);
-             butSendEmail.setDisable(true);
-             butReport.setDisable(true);
-
          }
     }
 
@@ -139,6 +139,7 @@ public class DashBoardController {
         Stage stage = new Stage();
         Scene scene = new Scene(load);
         stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
         Image image = new Image(getClass().getResourceAsStream("/images/tire.png"));
         stage.getIcons().add(image);
         stage.setResizable(false);
@@ -169,5 +170,4 @@ public class DashBoardController {
         AnchorPane anchorPane = FXMLLoader.load(getClass().getResource(path));
         changeAnchorPane.getChildren().add(anchorPane);
     }
-
 }

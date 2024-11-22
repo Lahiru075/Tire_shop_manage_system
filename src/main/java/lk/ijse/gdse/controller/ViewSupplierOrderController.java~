@@ -334,10 +334,6 @@ public class ViewSupplierOrderController implements Initializable {
             txtTotalAmount.setText(String.valueOf(supplierOrderTm.getTotal()));
             txtQty.setText(String.valueOf(supplierOrderTm.getQty()));
         }
-
-        butDelete.setDisable(false);
-        butUpdate.setDisable(false);
-        butAddToStock.setDisable(false);
     }
 
     private void getAllSupplierOrders() throws SQLException {
@@ -428,10 +424,6 @@ public class ViewSupplierOrderController implements Initializable {
         colOrderStatus.setCellValueFactory(new PropertyValueFactory<>("orderStatus"));
         colOrderSize.setCellValueFactory(new PropertyValueFactory<>("orderSize"));
         colOrderTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
-
-        butDelete.setDisable(true);
-        butUpdate.setDisable(true);
-        butAddToStock.setDisable(true);
 
         try {
             reset();

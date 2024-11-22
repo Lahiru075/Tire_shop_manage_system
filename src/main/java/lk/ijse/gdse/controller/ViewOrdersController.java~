@@ -286,6 +286,8 @@ public class ViewOrdersController implements Initializable {
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "DB error...!").show();
         }
+
+
     }
 
     @Override

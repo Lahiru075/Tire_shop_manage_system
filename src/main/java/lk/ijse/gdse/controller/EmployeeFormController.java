@@ -254,6 +254,10 @@ public class EmployeeFormController implements Initializable {
             txtContact.setText(employeeTm.getContact());
             txtSalary.setText(String.valueOf(employeeTm.getSalary()));
         }
+
+        btnSave.setDisable(true);
+        btnDelete.setDisable(false);
+        btnUpdate.setDisable(false);
     }
 
     @FXML
@@ -297,6 +301,10 @@ public class EmployeeFormController implements Initializable {
         txtAddress.setText("");
         txtContact.setText("");
         txtSalary.setText("");
+
+        btnSave.setDisable(false);
+        btnDelete.setDisable(true);
+        btnUpdate.setDisable(true);
     }
 
     @Override

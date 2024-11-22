@@ -144,6 +144,38 @@ public class SupplierFormController implements Initializable {
         String contact = txtContact.getText();
         String address = txtAddress.getText();
 
+        if (supId.isEmpty() || name.isEmpty() || email.isEmpty() || contact.isEmpty() || address.isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Empty Fields").showAndWait();
+            return;
+        }
+
+        String namePattern = "^[A-Za-z ]+$";
+        String emailPattern = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
+        String contactPattern = "^(\\d+)||((\\d+\\.)(\\d){2})$";
+        String addressPattern = "^[A-Za-z0-9 ]+$";
+
+        boolean isValidName = name.matches(namePattern);
+        boolean isValidEmail = email.matches(emailPattern);
+        boolean isValidContact = contact.matches(contactPattern);
+        boolean isValidAddress = address.matches(addressPattern);
+
+        if (!isValidName) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Name").showAndWait();
+            return;
+        }
+        if (!isValidEmail) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Email").showAndWait();
+            return;
+        }
+        if (!isValidContact) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Contact").showAndWait();
+            return;
+        }
+        if (!isValidAddress) {
+            new Alert(Alert.AlertType.ERROR, "Invalid Address").showAndWait();
+            return;
+        }
+
         boolean isResult = supplierModel.updateSupplier(new SupplierDto(supId, name, email, contact, address));
 
         if (isResult) {

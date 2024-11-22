@@ -180,10 +180,6 @@ public class StockFormController implements Initializable {
         txtRecodeLevel.setText("");
         txtQty.setText("");
 
-        btnSave.setDisable(false);
-        btnDelete.setDisable(true);
-        btnUpdate.setDisable(true);
-
     }
 
     @FXML
@@ -265,10 +261,6 @@ public class StockFormController implements Initializable {
             txtQty.setText(String.valueOf(stockTm.getQty()));
             cmbTireId.setValue(stockTm.getTireId());
         }
-
-        btnSave.setDisable(true);
-        btnDelete.setDisable(false);
-        btnUpdate.setDisable(false);
     }
 
     @FXML

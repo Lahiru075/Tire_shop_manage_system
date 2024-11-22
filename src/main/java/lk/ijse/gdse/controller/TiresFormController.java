@@ -189,7 +189,7 @@ public class TiresFormController implements Initializable {
 
         String brandPattern = "^[a-zA-Z ]{2,30}$";
         String modelPattern = "^[a-zA-Z0-9-_]{2,20}$";
-        String sizePattern = "^\\d{3}\\/\\d{2,3}R\\d{2}(\\s?[0-9]{2,3}[A-Z]{1,2})?$";
+        String sizePattern = "^\\d{3}(\\/(\\d{1,3}|R\\d{2}))?(R\\d{2})?(\\s?[0-9]{2,3}[A-Z]{1,2})?$";
         String yearPattern = "^\\d{4}$";
         String pricePattern = "^[1-9][0-9]*(\\.[0-9]{1,2})?$";
 
@@ -241,6 +241,10 @@ public class TiresFormController implements Initializable {
             txtSize.setText(placeOrderTm.getTireSize());
             txtYear.setText(String.valueOf(placeOrderTm.getYear()));
         }
+
+        btnSave.setDisable(true);
+        btnDelete.setDisable(false);
+        btnUpdate.setDisable(false);
     }
 
     @FXML
@@ -282,6 +286,9 @@ public class TiresFormController implements Initializable {
         txtSize.setText("");
         txtYear.setText("");
 
+        btnSave.setDisable(false);
+        btnDelete.setDisable(true);
+        btnUpdate.setDisable(true);
     }
 
 

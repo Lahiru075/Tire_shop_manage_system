@@ -100,6 +100,26 @@ public class SignUpFormController implements Initializable {
             txtAdminUserName.clear();
             txtAdminPassword.clear();
         }
+
+//        boolean result = userModel.seveUser(new UserDto(usId, role, password, username));
+
+
+//        if (result) {
+//            Stage currentStage = (Stage) mainAnchorpane.getScene().getWindow();
+//            currentStage.close();
+//
+//            Parent load = FXMLLoader.load(getClass().getResource("/view/UserNamaAndPassword.fxml"));
+//            Scene scene = new Scene(load);
+//            Stage stage = new Stage();
+//            stage.setScene(scene);
+//            stage.setTitle("User Credentials");
+//            stage.setResizable(false);
+//            stage.show();
+//
+//        } else {
+//            new Alert(Alert.AlertType.ERROR, "Unsuccessful Sign in..!").show();
+//        }
+
     }
 
     @Override

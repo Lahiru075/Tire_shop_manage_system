@@ -167,6 +167,10 @@ public class UserFormController implements Initializable {
             txtPassword.setText(userTm.getPassword());
             txtUsername.setText(userTm.getUsername());
         }
+
+        btnSave.setDisable(true);
+        btnDelete.setDisable(false);
+        btnUpdate.setDisable(false);
     }
 
     @FXML
@@ -209,6 +213,10 @@ public class UserFormController implements Initializable {
         cmbRole.setValue("");
         txtPassword.setText("");
         txtUsername.setText("");
+
+        btnSave.setDisable(false);
+        btnDelete.setDisable(true);
+        btnUpdate.setDisable(true);
     }
 
     @Override

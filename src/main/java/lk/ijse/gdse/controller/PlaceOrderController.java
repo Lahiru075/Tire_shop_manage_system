@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import lk.ijse.gdse.dto.*;
 import lk.ijse.gdse.dto.Tm.CartTm;
@@ -171,6 +172,7 @@ public class PlaceOrderController implements Initializable {
             Stage stage = new Stage();
             Scene scene = new Scene(load);
             stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
             stage.setTitle("Add Customer");
             stage.setResizable(false);
             stage.showAndWait();
@@ -264,6 +266,15 @@ public class PlaceOrderController implements Initializable {
         for (CartTm cartTm : cartTms) {
             if (cartTm.getTireId().equals(tireId)) {
                 int newQty = cartTm.getQty() + qty;
+
+                // check quantity
+                int checkQty = stockModel.getQty(description);
+
+                if (newQty > checkQty) {
+                    new Alert(Alert.AlertType.ERROR, "Not enough stock").showAndWait();
+                    return;
+                }
+
                 cartTm.setQty(newQty);
 
                 double updatedPrice = cartTm.getPrice() + (qty * price);
@@ -304,6 +315,9 @@ public class PlaceOrderController implements Initializable {
                 this.total = 0.0;
             }
         });
+
+
+
 
         cartTms.add(cartTm);
         totalPrice += newPrice;
@@ -358,6 +372,7 @@ public class PlaceOrderController implements Initializable {
 
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         Image image = new Image(getClass().getResourceAsStream("/images/tire.png"));
         stage.getIcons().add(image);
@@ -372,7 +387,7 @@ public class PlaceOrderController implements Initializable {
         String brand = txtSearchBrand.getText();
 
         if (brand == null || brand.isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "Enter Tire Id").showAndWait();
+            new Alert(Alert.AlertType.ERROR, "Enter Tire Brand").showAndWait();
             txtSearchBrand.setText("");
             return;
         }
@@ -402,6 +417,12 @@ public class PlaceOrderController implements Initializable {
         }
 
         tireTable.setItems(placeOrderTms);
+        txtSearchBrand.setText("");
+    }
+
+    @FXML
+    void butRefreshOnAction(ActionEvent event) throws SQLException {
+        loadTable();
     }
 
     @Override

@@ -144,10 +144,18 @@
                   <Font name="System Bold" size="20.0" />
                </font>
                <HBox.margin>
-                  <Insets right="60.0" />
+                  <Insets right="5.0" />
                </HBox.margin>
             </Button>
-            <Label text="Quentity">
+            <Button mnemonicParsing="false" onAction="#butRefreshOnAction" prefHeight="46.0" prefWidth="98.0" styleClass="butMain" text="Refresh">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Label text="Quantity">
                <font>
                   <Font size="30.0" />
                </font>
